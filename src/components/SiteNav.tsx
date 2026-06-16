@@ -25,7 +25,8 @@ export default function SiteNav() {
         backdropFilter: "blur(12px)",
         boxShadow: "0 1px 20px rgba(111,78,55,0.08)",
       }}>
-      <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+      <div className="mx-auto h-20 flex items-center justify-between"
+        style={{paddingRight:"30px", paddingLeft:"30px",}}>
         <Link href="/" className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm"
             style={{ background: `linear-gradient(135deg, ${C.primary}, ${C.gold})` }}>T</div>

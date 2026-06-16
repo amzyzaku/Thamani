@@ -176,7 +176,7 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           HERO
       ══════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden w-full"
+      <section className="relative min-h-screen flex items-center overflow-hidden"
         style={{ background: `linear-gradient(135deg, ${C.deep} 0%, ${C.primary} 60%, ${C.warm} 100%)` }}>
 
         {/* African pattern overlay */}
@@ -188,7 +188,7 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-10"
           style={{ background: C.sand, filter: "blur(60px)" }} />
 
-        <div className="relative w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
+        <div className="relative w-full mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
           style={{ padding: "120px 40px 100px 40px" }}>
           {/* Left */}
           <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
@@ -306,7 +306,7 @@ export default function HomePage() {
           IMPACT STATS
       ══════════════════════════════════════════ */}
       <section className="py-20" style={{ background: C.offWhite }}>
-        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
+        <div className="mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="text-center mb-14">
             <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>Our Impact</p>
             <h2 className="text-4xl md:text-5xl font-black" style={{ fontFamily: "Manrope, sans-serif", color: C.deep }}>
@@ -334,7 +334,7 @@ export default function HomePage() {
           WHO WE ARE PREVIEW
       ══════════════════════════════════════════ */}
       <section className="py-20" style={{ background: C.cream }}>
-        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
+        <div className="  mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeUp>
               <div className="relative">
@@ -381,7 +381,7 @@ export default function HomePage() {
           CORE FOCUS AREAS
       ══════════════════════════════════════════ */}
       <section className="py-20" style={{ background: C.offWhite }}>
-        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
+        <div className="  mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="text-center mb-14">
             <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>What We Do</p>
             <h2 className="text-4xl md:text-5xl font-black mb-4"
@@ -422,7 +422,7 @@ export default function HomePage() {
           FEATURED INITIATIVES
       ══════════════════════════════════════════ */}
       <section className="py-20" style={{ background: C.cream }}>
-        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
+        <div className="  mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="flex items-end justify-between mb-14 flex-wrap gap-4">
             <div>
               <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>Current Initiatives</p>
@@ -526,7 +526,7 @@ export default function HomePage() {
           PARTNERS
       ══════════════════════════════════════════ */}
       <section className="py-16" style={{ background: C.offWhite }}>
-        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
+        <div className="  mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="text-center mb-10">
             <p className="text-sm font-bold uppercase tracking-widest" style={{ color: C.textMuted }}>
               Trusted by Leading Global Organisations
@@ -549,7 +549,7 @@ export default function HomePage() {
           NEWS
       ══════════════════════════════════════════ */}
       <section className="py-20" style={{ background: C.cream }}>
-        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
+        <div className="  mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="flex items-end justify-between mb-14 flex-wrap gap-4">
             <div>
               <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>Latest Updates</p>
@@ -605,8 +605,7 @@ export default function HomePage() {
       <section className="py-24 relative overflow-hidden"
         style={{ background: `linear-gradient(135deg, ${C.primary} 0%, ${C.deep} 100%)` }}>
         <div className="absolute inset-0 pattern-bg opacity-10" />
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10"
-          style={{ background: C.gold, filter: "blur(100px)" }} />
+        
 
         <div className="relative max-w-4xl mx-auto px-6 text-center">
           <FadeUp>
