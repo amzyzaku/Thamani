@@ -176,8 +176,8 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           HERO
       ══════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-20"
-        style={{ background: `linear-gradient(135deg, ${C.deep} 0%, ${C.primary} 60%, ${C.warm} 100%)`, padding: "120px 50px", }}>
+      <section className="relative min-h-screen flex items-center overflow-hidden"
+        style={{ background: `linear-gradient(135deg, ${C.deep} 0%, ${C.primary} 60%, ${C.warm} 100%)`, paddingTop: "100px", paddingBottom: "80px", paddingLeft: "0", paddingRight: "0" }}>
 
         {/* African pattern overlay */}
         <div className="absolute inset-0 pattern-bg opacity-20" />
@@ -188,15 +188,16 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-10"
           style={{ background: C.sand, filter: "blur(60px)" }} />
 
-        <div className="relative max-w-7xl mx-auto px-6 md:px-10 py-24 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full"
+          style={{ padding: "40px 24px 60px 24px" }}>
           {/* Left */}
-          <div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-8"
-              style={{ background: "rgba(199,154,59,0.2)", padding: "10px 5px", color: C.gold, border: "1px solid rgba(199,154,59,0.3)" }}
+              className="inline-flex items-center gap-2 rounded-full text-xs font-semibold"
+              style={{ background: "rgba(199,154,59,0.2)", padding: "10px 18px", color: C.gold, border: "1px solid rgba(199,154,59,0.3)", marginBottom: "28px" }}
             >
               <Star className="w-3.5 h-3.5" />
               Empowering Communities Since 2018
@@ -206,8 +207,8 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="text-5xl md:text-6xl lg:text-6xl font-black leading-[1.05] tracking-tight mb-6 text-white"
-              style={{ fontFamily: "Manrope, sans-serif" }}
+              className="font-black leading-[1.05] tracking-tight text-white"
+              style={{ fontFamily: "Manrope, sans-serif", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", marginBottom: "24px" }}
             >
               Building a{" "}
               <span style={{ color: C.gold }}>Better Africa</span>
@@ -218,8 +219,8 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55 }}
-              className="text-lg leading-relaxed mb-10 max-w-lg"
-              style={{ color: "rgba(255,255,255,0.75)" }}
+              className="text-lg leading-relaxed max-w-lg"
+              style={{ color: "rgba(255,255,255,0.75)", marginBottom: "36px" }}
             >
               Thamani empowers women and youth through transformative programmes, advocacy, partnerships, and community development — creating lasting impact across Africa.
             </motion.p>
@@ -258,27 +259,23 @@ export default function HomePage() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="relative hidden lg:block"
           >
-            <div className="grid grid-cols-2 gap-x-5">
-              <div className="space-y-1">
-                <div className="rounded-2xl overflow-hidden h-60"
-                  style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
+            <div className="grid grid-cols-2" style={{ gap: "10px" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+                <div className="rounded-2xl overflow-hidden" style={{ height: "240px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
                   <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
                     alt="Women empowerment" className="w-full h-full object-cover" />
                 </div>
-                <div className="rounded-2xl overflow-hidden h-40"
-                  style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
+                <div className="rounded-2xl overflow-hidden" style={{ height: "160px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
                   <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80"
                     alt="Youth development" className="w-full h-full object-cover" />
                 </div>
               </div>
-              <div className="space-y-4 mt-10">
-                <div className="rounded-2xl overflow-hidden h-40"
-                  style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "40px" }}>
+                <div className="rounded-2xl overflow-hidden" style={{ height: "160px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
                   <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=400&q=80"
                     alt="Community" className="w-full h-full object-cover" />
                 </div>
-                <div className="rounded-2xl overflow-hidden h-64"
-                  style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
+                <div className="rounded-2xl overflow-hidden" style={{ height: "240px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
                   <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=400&q=80"
                     alt="Impact" className="w-full h-full object-cover" />
                 </div>
