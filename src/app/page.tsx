@@ -177,7 +177,7 @@ export default function HomePage() {
           HERO
       ══════════════════════════════════════════ */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-20"
-        style={{ background: `linear-gradient(135deg, ${C.deep} 0%, ${C.primary} 60%, ${C.warm} 100%)` }}>
+        style={{ background: `linear-gradient(135deg, ${C.deep} 0%, ${C.primary} 60%, ${C.warm} 100%)`, padding: "120px 50px", }}>
 
         {/* African pattern overlay */}
         <div className="absolute inset-0 pattern-bg opacity-20" />
@@ -196,7 +196,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-8"
-              style={{ background: "rgba(199,154,59,0.2)", color: C.gold, border: "1px solid rgba(199,154,59,0.3)" }}
+              style={{ background: "rgba(199,154,59,0.2)", padding: "10px 5px", color: C.gold, border: "1px solid rgba(199,154,59,0.3)" }}
             >
               <Star className="w-3.5 h-3.5" />
               Empowering Communities Since 2018
@@ -206,7 +206,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight mb-6 text-white"
+              className="text-5xl md:text-6xl lg:text-6xl font-black leading-[1.05] tracking-tight mb-6 text-white"
               style={{ fontFamily: "Manrope, sans-serif" }}
             >
               Building a{" "}
@@ -258,9 +258,9 @@ export default function HomePage() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="relative hidden lg:block"
           >
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="rounded-2xl overflow-hidden h-64"
+            <div className="grid grid-cols-2 gap-x-5">
+              <div className="space-y-1">
+                <div className="rounded-2xl overflow-hidden h-60"
                   style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
                   <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
                     alt="Women empowerment" className="w-full h-full object-cover" />
