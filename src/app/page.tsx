@@ -176,8 +176,8 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           HERO
       ══════════════════════════════════════════ */}
-      <section className="relative min-h-screen flex items-center overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${C.deep} 0%, ${C.primary} 60%, ${C.warm} 100%)`, paddingTop: "50px", paddingBottom: "40px", paddingLeft: "0", paddingRight: "0" }}>
+      <section className="relative min-h-screen flex items-center overflow-hidden w-full"
+        style={{ background: `linear-gradient(135deg, ${C.deep} 0%, ${C.primary} 60%, ${C.warm} 100%)` }}>
 
         {/* African pattern overlay */}
         <div className="absolute inset-0 pattern-bg opacity-20" />
@@ -188,16 +188,16 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-10"
           style={{ background: C.sand, filter: "blur(60px)" }} />
 
-        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
-          style={{ padding: "70px 24px 60px 64px" }}>
+        <div className="relative w-full max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center"
+          style={{ padding: "120px 40px 100px 40px" }}>
           {/* Left */}
-          <div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 rounded-full text-xs font-semibold"
-              style={{ background: "rgba(199,154,59,0.2)", padding: "10px 10px", color: C.gold, border: "1px solid rgba(199,154,59,0.3)", marginBottom: "18px" }}
+              style={{ background: "rgba(199,154,59,0.2)", padding: "10px 18px", color: C.gold, border: "1px solid rgba(199,154,59,0.3)", marginBottom: "24px" }}
             >
               <Star className="w-3.5 h-3.5" />
               Empowering Communities Since 2018
@@ -208,7 +208,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="font-black leading-[1.05] tracking-tight text-white"
-              style={{ fontFamily: "Manrope, sans-serif", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", marginBottom: "18px" }}
+              style={{ fontFamily: "Manrope, sans-serif", fontSize: "clamp(2.4rem, 4.5vw, 4rem)", marginBottom: "20px", maxWidth: "560px" }}
             >
               Building a{" "}
               <span style={{ color: C.gold }}>Better Africa</span>
@@ -219,8 +219,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55 }}
-              className="text-lg leading-relaxed max-w-lg"
-              style={{ color: "rgba(255,255,255,0.75)", marginBottom: "24px" }}
+              style={{ color: "rgba(255,255,255,0.75)", marginBottom: "36px", fontSize: "1.05rem", lineHeight: "1.75", maxWidth: "480px" }}
             >
               Thamani empowers women and youth through transformative programmes, advocacy, partnerships, and community development — creating lasting impact across Africa.
             </motion.p>
@@ -229,23 +228,23 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-4"
+              style={{ display: "flex", flexWrap: "wrap", gap: "12px", alignItems: "center" }}
             >
               <Link href="/donate"
-                className="inline-flex items-center justify-center gap-2.5 rounded-full text-sm font-bold transition-all hover:scale-105"
-                style={{ background: C.gold, color: C.deep, padding: "10px 16px" }}>
+                className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-bold transition-all hover:scale-105"
+                style={{ background: C.gold, color: C.deep, padding: "14px 32px" }}>
                 <Heart className="w-4 h-4" />
                 Donate Now
               </Link>
               <Link href="/get-involved"
-                className="inline-flex items-center justify-center gap-2.5 rounded-full text-sm font-semibold transition-all hover:bg-white/10"
-                style={{ border: "2px solid rgba(255,255,255,0.3)", color: "white", padding: "10px 16px" }}>
+                className="inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold transition-all"
+                style={{ border: "2px solid rgba(255,255,255,0.35)", color: "white", padding: "14px 32px" }}>
                 Partner With Us
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link href="/who-we-are"
-                className="inline-flex items-center justify-center gap-2 text-sm font-medium transition-colors hover:text-white"
-                style={{ color: "rgba(255,255,255,0.6)", padding: "10px 5px" }}>
+                className="inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-white"
+                style={{ color: "rgba(255,255,255,0.6)", padding: "14px 4px" }}>
                 Join Our Community
                 <ChevronRight className="w-4 h-4" />
               </Link>
@@ -261,21 +260,21 @@ export default function HomePage() {
           >
             <div className="grid grid-cols-2" style={{ gap: "10px" }}>
               <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                <div className="rounded-2xl overflow-hidden" style={{ height: "240px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
+                <div className="rounded-2xl overflow-hidden" style={{ height: "250px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
                   <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80"
                     alt="Women empowerment" className="w-full h-full object-cover" />
                 </div>
-                <div className="rounded-2xl overflow-hidden" style={{ height: "160px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
+                <div className="rounded-2xl overflow-hidden" style={{ height: "165px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
                   <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&q=80"
                     alt="Youth development" className="w-full h-full object-cover" />
                 </div>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "40px" }}>
-                <div className="rounded-2xl overflow-hidden" style={{ height: "160px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
+                <div className="rounded-2xl overflow-hidden" style={{ height: "165px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
                   <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=400&q=80"
                     alt="Community" className="w-full h-full object-cover" />
                 </div>
-                <div className="rounded-2xl overflow-hidden" style={{ height: "240px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
+                <div className="rounded-2xl overflow-hidden" style={{ height: "250px", boxShadow: "0 20px 60px rgba(0,0,0,0.3)" }}>
                   <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=400&q=80"
                     alt="Impact" className="w-full h-full object-cover" />
                 </div>
@@ -286,8 +285,8 @@ export default function HomePage() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-6 text-white"
-              style={{ background: C.gold, borderRadius:"8px", padding:"5px 10px", boxShadow: "0 12px 40px rgba(199,154,59,0.4)" }}
+              className="absolute text-white"
+              style={{ bottom: "-20px", left: "-20px", background: C.gold, borderRadius: "16px", padding: "14px 20px", boxShadow: "0 12px 40px rgba(199,154,59,0.4)" }}
             >
               <p className="text-2xl font-black" style={{ fontFamily: "Manrope, sans-serif" }}>20K+</p>
               <p className="text-xs font-medium opacity-80">Lives Transformed</p>
@@ -307,7 +306,7 @@ export default function HomePage() {
           IMPACT STATS
       ══════════════════════════════════════════ */}
       <section className="py-20" style={{ background: C.offWhite }}>
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="text-center mb-14">
             <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>Our Impact</p>
             <h2 className="text-4xl md:text-5xl font-black" style={{ fontFamily: "Manrope, sans-serif", color: C.deep }}>
@@ -335,7 +334,7 @@ export default function HomePage() {
           WHO WE ARE PREVIEW
       ══════════════════════════════════════════ */}
       <section className="py-20" style={{ background: C.cream }}>
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeUp>
               <div className="relative">
@@ -382,7 +381,7 @@ export default function HomePage() {
           CORE FOCUS AREAS
       ══════════════════════════════════════════ */}
       <section className="py-20" style={{ background: C.offWhite }}>
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="text-center mb-14">
             <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>What We Do</p>
             <h2 className="text-4xl md:text-5xl font-black mb-4"
@@ -423,7 +422,7 @@ export default function HomePage() {
           FEATURED INITIATIVES
       ══════════════════════════════════════════ */}
       <section className="py-20" style={{ background: C.cream }}>
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="flex items-end justify-between mb-14 flex-wrap gap-4">
             <div>
               <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>Current Initiatives</p>
@@ -527,7 +526,7 @@ export default function HomePage() {
           PARTNERS
       ══════════════════════════════════════════ */}
       <section className="py-16" style={{ background: C.offWhite }}>
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="text-center mb-10">
             <p className="text-sm font-bold uppercase tracking-widest" style={{ color: C.textMuted }}>
               Trusted by Leading Global Organisations
@@ -550,7 +549,7 @@ export default function HomePage() {
           NEWS
       ══════════════════════════════════════════ */}
       <section className="py-20" style={{ background: C.cream }}>
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
+        <div className="max-w-7xl mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="flex items-end justify-between mb-14 flex-wrap gap-4">
             <div>
               <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>Latest Updates</p>
@@ -648,5 +647,6 @@ export default function HomePage() {
     </div>
   );
 }
+
 
 
