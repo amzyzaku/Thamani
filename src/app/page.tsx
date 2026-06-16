@@ -71,9 +71,9 @@ const STATS = [
 const FOCUS_AREAS = [
   { icon: Heart, title: "Women Empowerment", desc: "Providing women with skills, resources, and platforms to lead and thrive in their communities.", color: "#C79A3B" },
   { icon: Users, title: "Youth Development", desc: "Equipping young people with tools for leadership, entrepreneurship, and civic engagement.", color: "#6F4E37" },
-  { icon: BookOpen, title: "Education Access", desc: "Expanding educational opportunities for underserved communities through scholarships and programs.", color: "#8B5E3C" },
+  { icon: BookOpen, title: "Education Access", desc: "Educational opportunities for underserved communities through scholarships and programs.", color: "#8B5E3C" },
   { icon: Award, title: "Leadership Training", desc: "Building the next generation of community leaders through mentorship and capacity building.", color: "#C79A3B" },
-  { icon: Briefcase, title: "Economic Inclusion", desc: "Creating pathways to economic independence through skills training and micro-enterprise support.", color: "#6F4E37" },
+  { icon: Briefcase, title: "Economic Inclusion", desc: "Pathways to economic independence through skills training and micro-enterprise support.", color: "#6F4E37" },
   { icon: Globe, title: "Community Development", desc: "Strengthening communities through advocacy, infrastructure support, and social programmes.", color: "#8B5E3C" },
 ];
 
@@ -305,20 +305,20 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           IMPACT STATS
       ══════════════════════════════════════════ */}
-      <section className="py-20" style={{ background: C.offWhite }}>
+      <section className="" style={{ background: C.offWhite, padding: "70px 0px 100px", }}>
         <div className="mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="text-center mb-14">
-            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>Our Impact</p>
+            <p className="text-sm font-bold uppercase tracking-widest" style={{ color: C.gold, marginBottom:"10px",}}>Our Impact</p>
             <h2 className="text-4xl md:text-5xl font-black" style={{ fontFamily: "Manrope, sans-serif", color: C.deep }}>
               Numbers That Tell Our Story
             </h2>
           </FadeUp>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6" style={{ marginTop: "25px",}}>
             {STATS.map((s, i) => (
               <FadeUp key={s.label} delay={i * 0.1}>
-                <div className="text-center p-8 rounded-2xl transition-all hover:scale-105"
-                  style={{ background: C.cream, boxShadow: "0 4px 24px rgba(111,78,55,0.06)" }}>
+                <div className="text-center rounded-2xl transition-all hover:scale-105"
+                  style={{padding:"8px", background: C.cream, boxShadow: "0 4px 10px rgba(111,78,55,0.2)" }}>
                   <p className="text-4xl md:text-5xl font-black mb-2" style={{ color: C.primary, fontFamily: "Manrope, sans-serif" }}>
                     <Counter end={s.value} suffix={s.suffix} />
                   </p>
@@ -333,8 +333,8 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           WHO WE ARE PREVIEW
       ══════════════════════════════════════════ */}
-      <section className="py-20" style={{ background: C.cream }}>
-        <div className="  mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
+      <section className="" style={{ background: C.cream }}>
+        <div className="  mx-auto" style={{ padding: "70px 40px" }}>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <FadeUp>
               <div className="relative">
@@ -342,11 +342,6 @@ export default function HomePage() {
                   style={{ boxShadow: "0 24px 80px rgba(111,78,55,0.15)" }}>
                   <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?w=800&q=80"
                     alt="Who we are" className="w-full h-full object-cover" />
-                </div>
-                <div className="absolute -bottom-5 -right-5 px-6 py-5 rounded-2xl text-white"
-                  style={{ background: `linear-gradient(135deg, ${C.primary}, ${C.warm})`, boxShadow: "0 12px 40px rgba(111,78,55,0.3)" }}>
-                  <p className="text-xl font-black" style={{ fontFamily: "Manrope, sans-serif" }}>Est. 2018</p>
-                  <p className="text-xs opacity-80">8 Years of Impact</p>
                 </div>
               </div>
             </FadeUp>
@@ -380,15 +375,15 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           CORE FOCUS AREAS
       ══════════════════════════════════════════ */}
-      <section className="py-20" style={{ background: C.offWhite }}>
+      <section className="" style={{ background: C.offWhite, padding:"70px 40px", }}>
         <div className="  mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
-          <FadeUp className="text-center mb-14">
-            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>What We Do</p>
+          <FadeUp className="text-center">
+            <p className="text-sm font-bold uppercase tracking-widest" style={{ color: C.gold, paddingBottom:"10px",}}>What We Do</p>
             <h2 className="text-4xl md:text-5xl font-black mb-4"
-              style={{ fontFamily: "Manrope, sans-serif", color: C.deep }}>
+              style={{ fontFamily: "Manrope, sans-serif", color: C.deep , paddingBottom:"10px",}}>
               Our Core Focus Areas
             </h2>
-            <p className="text-base max-w-2xl mx-auto" style={{ color: C.textMuted }}>
+            <p className="text-base mx-auto" style={{ color: C.textMuted, paddingBottom:"50px",}}>
               Six pillars of work that define how we create lasting change for women, youth, and communities.
             </p>
           </FadeUp>
@@ -397,7 +392,7 @@ export default function HomePage() {
             {FOCUS_AREAS.map((area, i) => (
               <FadeUp key={area.title} delay={i * 0.08}>
                 <div className="group p-8 rounded-2xl transition-all duration-300 hover:scale-[1.02] cursor-pointer"
-                  style={{ background: C.cream, boxShadow: "0 4px 24px rgba(111,78,55,0.06)" }}>
+                  style={{ padding:"15px", background: C.cream, boxShadow: "0 4px 10px rgba(111,78,55,0.2)" }}>
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-all group-hover:scale-110"
                     style={{ background: `${area.color}18` }}>
                     <area.icon className="w-6 h-6" style={{ color: area.color }} />
@@ -421,18 +416,18 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           FEATURED INITIATIVES
       ══════════════════════════════════════════ */}
-      <section className="py-20" style={{ background: C.cream }}>
-        <div className="  mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
+      <section className="" style={{ background: C.cream }}>
+        <div className="  mx-auto" style={{ padding: "70px 40px" }}>
           <FadeUp className="flex items-end justify-between mb-14 flex-wrap gap-4">
             <div>
-              <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>Current Initiatives</p>
-              <h2 className="text-4xl md:text-5xl font-black" style={{ fontFamily: "Manrope, sans-serif", color: C.deep }}>
+              <p className="text-sm font-bold uppercase tracking-widest" style={{ color: C.gold, marginBottom:"8px",}}>Current Initiatives</p>
+              <h2 className="text-4xl md:text-5xl font-black" style={{ fontFamily: "Manrope, sans-serif", color: C.deep, marginBottom:"25px",}}>
                 Featured Programmes
               </h2>
             </div>
             <Link href="/what-we-do"
               className="inline-flex items-center gap-2 text-sm font-semibold transition-colors"
-              style={{ color: C.primary }}>
+              style={{ color: C.primary, margin:"15px 0px",}}>
               View All Programmes <ArrowRight className="w-4 h-4" />
             </Link>
           </FadeUp>
@@ -441,14 +436,14 @@ export default function HomePage() {
             {INITIATIVES.map((item, i) => (
               <FadeUp key={item.title} delay={i * 0.1}>
                 <div className="rounded-2xl overflow-hidden transition-all hover:scale-[1.02]"
-                  style={{ background: C.offWhite, boxShadow: "0 4px 24px rgba(111,78,55,0.08)" }}>
+                  style={{padding:"20px", background: C.offWhite, boxShadow: "0 4px 10px rgba(111,78,55,0.2)" }}>
                   <div className="h-48 overflow-hidden">
                     <img src={item.image} alt={item.title}
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                   </div>
                   <div className="p-6">
-                    <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-3"
-                      style={{ background: `${C.primary}15`, color: C.primary }}>
+                    <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full "
+                      style={{ background: `${C.primary}15`, color: C.primary, padding:"2px 8px", margin:"8px 0px 2px ", }}>
                       {item.category}
                     </span>
                     <h3 className="text-lg font-bold mb-2" style={{ fontFamily: "Manrope, sans-serif", color: C.deep }}>
@@ -471,18 +466,18 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           TESTIMONIALS
       ══════════════════════════════════════════ */}
-      <section className="py-20"
-        style={{ background: `linear-gradient(135deg, ${C.deep} 0%, ${C.primary} 100%)` }}>
-        <div className="max-w-5xl mx-auto px-6 md:px-10 text-center">
+      <section className=""
+        style={{ background: `linear-gradient(135deg, ${C.deep} 0%, ${C.primary} 100%)`, padding:"70px 40px" }}>
+        <div className="mx-auto px-6 md:px-10 text-center">
           <FadeUp>
-            <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>Impact Stories</p>
+            <p className="text-sm font-bold uppercase tracking-widest" style={{ color: C.gold }}>Impact Stories</p>
             <h2 className="text-4xl md:text-5xl font-black text-white mb-16"
               style={{ fontFamily: "Manrope, sans-serif" }}>
               Lives Transformed
             </h2>
           </FadeUp>
 
-          <div className="relative min-h-[280px]">
+          <div className="relative min-h-[200px]" style={{marginTop:"40px",}}>
             {TESTIMONIALS.map((t, i) => (
               <motion.div
                 key={i}
@@ -491,9 +486,8 @@ export default function HomePage() {
                 transition={{ duration: 0.6 }}
                 className={`absolute inset-0 ${i === activeTestimonial ? "pointer-events-auto" : "pointer-events-none"}`}
               >
-                <Quote className="w-12 h-12 mx-auto mb-6" style={{ color: C.gold, opacity: 0.5 }} />
-                <p className="text-xl md:text-2xl font-medium leading-relaxed text-white mb-8 max-w-3xl mx-auto"
-                  style={{ fontFamily: "Manrope, sans-serif" }}>
+                <p className="text-xl md:text-2xl font-medium leading-relaxed text-white mb-8 mx-auto"
+                  style={{ fontFamily: "Manrope, sans-serif", marginBottom:"20px",}}>
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="flex items-center justify-center gap-4">
@@ -509,7 +503,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="flex justify-center gap-2 mt-8">
+          <div className="flex justify-center gap-2">
             {TESTIMONIALS.map((_, i) => (
               <button
                 key={i}
@@ -602,12 +596,12 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           FINAL CTA
       ══════════════════════════════════════════ */}
-      <section className="py-24 relative overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${C.primary} 0%, ${C.deep} 100%)` }}>
+      <section className="relative overflow-hidden"
+        style={{ background: `linear-gradient(135deg, ${C.primary} 0%, ${C.deep} 100%)`, padding:"70px 40px", }}>
         <div className="absolute inset-0 pattern-bg opacity-10" />
         
 
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
+        <div className="relative mx-auto px-6 text-center">
           <FadeUp>
             <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: C.gold }}>
               Be Part of the Change
@@ -617,7 +611,7 @@ export default function HomePage() {
               Join Us in Creating{" "}
               <span style={{ color: C.gold }}>Lasting Impact</span>
             </h2>
-            <p className="text-lg text-white/70 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-white/70 mb-12 mx-auto leading-relaxed">
               Every contribution — whether through donation, volunteering, or partnership — directly transforms lives and communities across Africa.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
