@@ -519,10 +519,10 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           PARTNERS
       ══════════════════════════════════════════ */}
-      <section className="py-16" style={{ background: C.offWhite }}>
+      <section className="" style={{ background: C.offWhite, padding:"70px 0px", }}>
         <div className="  mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
-          <FadeUp className="text-center mb-10">
-            <p className="text-sm font-bold uppercase tracking-widest" style={{ color: C.textMuted }}>
+          <FadeUp className="text-center">
+            <p className="text-sm font-bold uppercase tracking-widest" style={{ color: C.textMuted, paddingBottom:"30px" }}>
               Trusted by Leading Global Organisations
             </p>
           </FadeUp>
@@ -530,7 +530,7 @@ export default function HomePage() {
             {PARTNERS.map((p) => (
               <FadeUp key={p}>
                 <div className="flex items-center justify-center px-4 py-4 rounded-xl text-xs font-semibold text-center transition-all hover:scale-105 cursor-pointer"
-                  style={{ background: C.cream, color: C.textMuted, boxShadow: "0 2px 12px rgba(111,78,55,0.06)" }}>
+                  style={{ background: C.cream, padding:"5px", color: C.textMuted, boxShadow: "0 4px 10px rgba(111,78,55,0.2)" }}>
                   {p}
                 </div>
               </FadeUp>
@@ -542,18 +542,18 @@ export default function HomePage() {
       {/* ══════════════════════════════════════════
           NEWS
       ══════════════════════════════════════════ */}
-      <section className="py-20" style={{ background: C.cream }}>
+      <section className="" style={{ background: C.cream, padding:"70px 0px" }}>
         <div className="  mx-auto" style={{ padding: "0 clamp(24px, 5vw, 80px)" }}>
           <FadeUp className="flex items-end justify-between mb-14 flex-wrap gap-4">
             <div>
               <p className="text-sm font-bold uppercase tracking-widest mb-3" style={{ color: C.gold }}>Latest Updates</p>
-              <h2 className="text-4xl md:text-5xl font-black" style={{ fontFamily: "Manrope, sans-serif", color: C.deep }}>
+              <h2 className="text-4xl md:text-5xl font-black" style={{ margin:"10px 0px 20px 0px", fontFamily: "Manrope, sans-serif", color: C.deep }}>
                 News & Updates
               </h2>
             </div>
             <Link href="/resources"
               className="inline-flex items-center gap-2 text-sm font-semibold"
-              style={{ color: C.primary }}>
+              style={{ margin:"10px 0px", color: C.primary }}>
               View All News <ArrowRight className="w-4 h-4" />
             </Link>
           </FadeUp>
@@ -562,21 +562,17 @@ export default function HomePage() {
             {NEWS.map((n, i) => (
               <FadeUp key={n.title} delay={i * 0.1}>
                 <article className="rounded-2xl overflow-hidden transition-all hover:scale-[1.02]"
-                  style={{ background: C.offWhite, boxShadow: "0 4px 24px rgba(111,78,55,0.08)" }}>
+                  style={{ padding:"20px", background: C.offWhite, boxShadow: "0 4px 24px rgba(111,78,55,0.08)" }}>
                   <div className="h-48 overflow-hidden">
                     <img src={n.image} alt={n.title}
                       className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 mb-3">
-                      <span className="text-xs font-semibold px-2.5 py-1 rounded-full"
-                        style={{ background: `${C.primary}15`, color: C.primary }}>
-                        {n.category}
-                      </span>
-                      <span className="text-xs" style={{ color: C.textMuted }}>{n.date}</span>
+                      <span className="text-xs" style={{margin:"10px 0px 5px 0px", color: C.textMuted }}>{n.date}</span>
                     </div>
                     <h3 className="text-base font-bold leading-snug mb-2"
-                      style={{ fontFamily: "Manrope, sans-serif", color: C.deep }}>
+                      style={{ marginBottom:"5px", fontFamily: "Manrope, sans-serif", color: C.deep }}>
                       {n.title}
                     </h3>
                     <p className="text-sm leading-relaxed mb-4" style={{ color: C.textMuted }}>{n.summary}</p>
@@ -597,21 +593,21 @@ export default function HomePage() {
           FINAL CTA
       ══════════════════════════════════════════ */}
       <section className="relative overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${C.primary} 0%, ${C.deep} 100%)`, padding:"70px 40px", }}>
+        style={{ background: C.offWhite, padding:"70px 40px", }}>
         <div className="absolute inset-0 pattern-bg opacity-10" />
         
 
         <div className="relative mx-auto px-6 text-center">
           <FadeUp>
-            <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{ color: C.gold }}>
+            <p className="text-sm font-bold uppercase tracking-widest mb-4" style={{marginBottom:"10px", color: C.gold }}>
               Be Part of the Change
             </p>
-            <h2 className="text-4xl md:text-6xl font-black text-white mb-6"
-              style={{ fontFamily: "Manrope, sans-serif" }}>
+            <h2 className="text-4xl md:text-6xl font-black text-white"
+              style={{ color: C.textDark, marginBottom:"10px", fontFamily: "Manrope, sans-serif" }}>
               Join Us in Creating{" "}
               <span style={{ color: C.gold }}>Lasting Impact</span>
             </h2>
-            <p className="text-lg text-white/70 mb-12 mx-auto leading-relaxed">
+            <p className="text-lg text-white/70 mx-auto leading-relaxed" style={{marginBottom:"40px", color: C.textDark,}}>
               Every contribution — whether through donation, volunteering, or partnership — directly transforms lives and communities across Africa.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -622,14 +618,14 @@ export default function HomePage() {
                 Donate Today
               </Link>
               <Link href="/get-involved"
-                className="inline-flex items-center gap-2.5 rounded-full text-sm font-semibold text-white border-2 transition-all hover:bg-white/10"
-                style={{ borderColor: "rgba(255,255,255,0.3)", padding: "16px 40px" }}>
+                className="inline-flex items-center gap-2.5 rounded-full text-sm font-semibold text-white border-2 transition-all hover:bg-black/10 transition-all hover:scale-105"
+                style={{ borderColor: "rgba(0, 0, 0, 0.3)", color: C.textDark, padding: "16px 40px" }}>
                 <Users className="w-4 h-4" />
                 Volunteer
               </Link>
               <Link href="/get-involved"
-                className="inline-flex items-center gap-2.5 rounded-full text-sm font-semibold text-white border-2 transition-all hover:bg-white/10"
-                style={{ borderColor: "rgba(255,255,255,0.3)", padding: "16px 40px" }}>
+                className="inline-flex items-center gap-2.5 rounded-full text-sm font-semibold text-white border-2 transition-all hover:bg-black/10 transition-all hover:scale-105"
+                style={{ borderColor: "rgba(2, 2, 2, 0.3)", color: C.textDark, padding: "16px 40px" }}>
                 <Globe className="w-4 h-4" />
                 Partner With Us
               </Link>
