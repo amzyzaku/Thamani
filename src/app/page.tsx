@@ -177,7 +177,7 @@ export default function HomePage() {
           HERO
       ══════════════════════════════════════════ */}
       <section className="relative min-h-screen flex items-center overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${C.deep} 0%, ${C.primary} 60%, ${C.warm} 100%)`, paddingTop: "100px", paddingBottom: "80px", paddingLeft: "0", paddingRight: "0" }}>
+        style={{ background: `linear-gradient(135deg, ${C.deep} 0%, ${C.primary} 60%, ${C.warm} 100%)`, paddingTop: "50px", paddingBottom: "40px", paddingLeft: "0", paddingRight: "0" }}>
 
         {/* African pattern overlay */}
         <div className="absolute inset-0 pattern-bg opacity-20" />
@@ -188,16 +188,16 @@ export default function HomePage() {
         <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full opacity-10"
           style={{ background: C.sand, filter: "blur(60px)" }} />
 
-        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full"
-          style={{ padding: "40px 24px 60px 24px" }}>
+        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center"
+          style={{ padding: "70px 24px 60px 64px" }}>
           {/* Left */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
+          <div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
               className="inline-flex items-center gap-2 rounded-full text-xs font-semibold"
-              style={{ background: "rgba(199,154,59,0.2)", padding: "10px 18px", color: C.gold, border: "1px solid rgba(199,154,59,0.3)", marginBottom: "28px" }}
+              style={{ background: "rgba(199,154,59,0.2)", padding: "10px 10px", color: C.gold, border: "1px solid rgba(199,154,59,0.3)", marginBottom: "18px" }}
             >
               <Star className="w-3.5 h-3.5" />
               Empowering Communities Since 2018
@@ -208,7 +208,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="font-black leading-[1.05] tracking-tight text-white"
-              style={{ fontFamily: "Manrope, sans-serif", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", marginBottom: "24px" }}
+              style={{ fontFamily: "Manrope, sans-serif", fontSize: "clamp(2.2rem, 5vw, 3.8rem)", marginBottom: "18px" }}
             >
               Building a{" "}
               <span style={{ color: C.gold }}>Better Africa</span>
@@ -220,7 +220,7 @@ export default function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.55 }}
               className="text-lg leading-relaxed max-w-lg"
-              style={{ color: "rgba(255,255,255,0.75)", marginBottom: "36px" }}
+              style={{ color: "rgba(255,255,255,0.75)", marginBottom: "24px" }}
             >
               Thamani empowers women and youth through transformative programmes, advocacy, partnerships, and community development — creating lasting impact across Africa.
             </motion.p>
@@ -233,19 +233,19 @@ export default function HomePage() {
             >
               <Link href="/donate"
                 className="inline-flex items-center justify-center gap-2.5 rounded-full text-sm font-bold transition-all hover:scale-105"
-                style={{ background: C.gold, color: C.deep, padding: "16px 36px" }}>
+                style={{ background: C.gold, color: C.deep, padding: "10px 16px" }}>
                 <Heart className="w-4 h-4" />
                 Donate Now
               </Link>
               <Link href="/get-involved"
                 className="inline-flex items-center justify-center gap-2.5 rounded-full text-sm font-semibold transition-all hover:bg-white/10"
-                style={{ border: "2px solid rgba(255,255,255,0.3)", color: "white", padding: "16px 36px" }}>
+                style={{ border: "2px solid rgba(255,255,255,0.3)", color: "white", padding: "10px 16px" }}>
                 Partner With Us
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link href="/who-we-are"
                 className="inline-flex items-center justify-center gap-2 text-sm font-medium transition-colors hover:text-white"
-                style={{ color: "rgba(255,255,255,0.6)", padding: "16px 8px" }}>
+                style={{ color: "rgba(255,255,255,0.6)", padding: "10px 5px" }}>
                 Join Our Community
                 <ChevronRight className="w-4 h-4" />
               </Link>
@@ -286,8 +286,8 @@ export default function HomePage() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -bottom-6 -left-6 px-5 py-4 rounded-2xl text-white"
-              style={{ background: C.gold, boxShadow: "0 12px 40px rgba(199,154,59,0.4)" }}
+              className="absolute -bottom-6 -left-6 text-white"
+              style={{ background: C.gold, borderRadius:"8px", padding:"5px 10px", boxShadow: "0 12px 40px rgba(199,154,59,0.4)" }}
             >
               <p className="text-2xl font-black" style={{ fontFamily: "Manrope, sans-serif" }}>20K+</p>
               <p className="text-xs font-medium opacity-80">Lives Transformed</p>
